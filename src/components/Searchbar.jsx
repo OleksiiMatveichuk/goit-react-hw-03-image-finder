@@ -1,14 +1,20 @@
 export const Searchbar = ({ submit }) => {
+  const handleSubmit = e => {
+    e.preventDefault();
+    const { value } = e.target.elements.query;
+    submit(value);
+  };
+
   return (
     <header className="searchbar">
-      <form className="form" onSubmit={submit}>
-        <button type="submit" className="button">
-          <span className="button-label">Search</span>
+      <form className="searchForm" onSubmit={handleSubmit}>
+        <button type="submit" className="searchForm-button">
+          <span className="searchForm-button-label">Search</span>
         </button>
 
         <input
           name="query"
-          className="input"
+          className="searchForm-input"
           type="text"
           autoComplete="off"
           autoFocus

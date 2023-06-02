@@ -20,13 +20,12 @@ export class App extends Component {
   };
 
   async componentDidUpdate(_, prevState) {
-    const { queri, page, photos } = this.state;
+    const { queri, page } = this.state;
     if (prevState.queri !== queri || prevState.page !== page) {
       this.setState({ isLoading: true });
       try {
         const { hits, totalHits } = await getImages(queri, page);
 
-        console.log('totalHits :>> ', totalHits);
         this.setState(prev => ({
           photos: [...prev.photos, ...hits],
           showBtn: page < Math.ceil(totalHits / 15),
@@ -63,7 +62,6 @@ export class App extends Component {
   };
 
   render() {
-    console.log('this.state :>> ', this.state);
     const { photos, showBtn, isLoading, imageURL } = this.state;
     return (
       <div className="app">

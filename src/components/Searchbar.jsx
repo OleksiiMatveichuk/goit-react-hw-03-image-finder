@@ -9,7 +9,7 @@ export const Searchbar = ({ submit }) => {
     <header className="searchbar">
       <form className="searchForm" onSubmit={handleSubmit}>
         <button type="submit" className="searchForm-button">
-          <span className="searchForm-button-label">Search</span>
+          Search
         </button>
 
         <input

@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export const ImageGalleryItem = ({ photos, click }) => {
   return (
     <>
@@ -13,4 +15,8 @@ export const ImageGalleryItem = ({ photos, click }) => {
       ))}
     </>
   );
+};
+
+ImageGalleryItem.propTypes = {
+  photos: PropTypes.array.isRequired,
 };

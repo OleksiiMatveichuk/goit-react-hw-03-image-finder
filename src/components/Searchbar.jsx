@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export const Searchbar = ({ submit }) => {
   const handleSubmit = e => {
     e.preventDefault();
@@ -23,4 +25,8 @@ export const Searchbar = ({ submit }) => {
       </form>
     </header>
   );
+};
+
+Searchbar.propTypes = {
+  submit: PropTypes.func.isRequired,
 };

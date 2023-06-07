@@ -19,4 +19,5 @@ export const ImageGalleryItem = ({ photos, click }) => {
 
 ImageGalleryItem.propTypes = {
   photos: PropTypes.array.isRequired,
+  click: PropTypes.func.isRequired,
 };

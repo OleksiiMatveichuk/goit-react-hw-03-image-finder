@@ -12,7 +12,6 @@ export class Modal extends Component {
 
   closeEsc = e => {
     if (e.key === 'Escape') {
-      console.log('Escape');
       this.props.offModal('');
     }
   };
@@ -36,4 +35,5 @@ export class Modal extends Component {
 
 Modal.propTypes = {
   url: PropTypes.string.isRequired,
+  offModal: PropTypes.func.isRequired,
 };
